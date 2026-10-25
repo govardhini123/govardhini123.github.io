@@ -195,6 +195,32 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 @media (max-width:460px){.cert{grid-template-columns:1fr}.facts{grid-template-columns:1fr}}
 #pipeline .eyebrow,#certs .eyebrow,#projects .eyebrow,#skills .eyebrow{margin-bottom:20px}
 .contact h2{margin:0}
+
+.certs{grid-template-columns:repeat(3,1fr)!important}
+.cert{grid-template-columns:84px 1fr!important;padding:20px!important;gap:16px!important}
+.cert .badge{width:84px;height:84px}
+.cert h3{font-size:18px!important}
+.cert .issuer{margin:6px 0 0!important}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.sec-head .eyebrow{margin:0!important}
+.verify{font-weight:600;font-size:14px}
+.others{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.oc{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 6px;background:rgba(13,20,36,.8);font-size:14px;font-weight:500}
+.oc i{font-style:normal;font-family:var(--mono);font-size:11px;font-weight:600;min-width:30px;height:30px;padding:0 6px;border-radius:999px;display:grid;place-items:center;background:rgba(56,214,230,.14);color:var(--flow)}
+.walls{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.wall{border:1px solid var(--line);border-radius:18px;padding:20px;background:rgba(13,20,36,.72);min-width:0}
+.wall h3{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mute);font-weight:500}
+.wall h3 em{font-style:normal;margin-left:auto;font-family:var(--display);font-size:20px;color:var(--fg)}
+.dotc{width:8px;height:8px;border-radius:50%}
+.bgrid{display:grid;gap:8px}
+.bdg{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:center;padding:8px 10px;border-radius:10px;background:rgba(7,11,22,.6);transition:background .2s}
+.bdg:hover{background:rgba(56,214,230,.08)}
+.bdg .ico{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;font-size:17px}
+.bdg.aws .ico{background:rgba(255,179,71,.14);color:var(--heat)}
+.bdg.ibm .ico{background:rgba(56,214,230,.14);color:var(--flow)}
+.bdg b{display:block;font-size:14px;font-weight:600;line-height:1.3}
+.bdg small{font-family:var(--mono);font-size:11.5px;color:var(--mute)}
+@media (max-width:960px){.certs{grid-template-columns:1fr!important}.walls{grid-template-columns:1fr}}
 </style>
 
 </head>
@@ -238,9 +264,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 
   <div class="strip reveal">
     <div><strong>3+</strong><span>years in IoT &amp; cloud</span></div>
-    <div><strong class="count" data-n="8">8</strong><span>AWS services used</span></div>
-    <div><strong class="count" data-n="7">7</strong><span>projects built</span></div>
-    <div><strong class="count" data-n="2">2</strong><span>certifications</span></div>
+    <div><strong>8</strong><span>AWS services used</span></div>
+    <div><strong>7</strong><span>projects built</span></div>
+    <div><strong>15</strong><span>certifications &amp; badges</span></div>
   </div>
 
   <section id="about" class="reveal">
@@ -291,38 +317,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
   </section>
 
   <section id="certs" class="reveal">
-    <p class="eyebrow">Certifications</p>
+    <div class="sec-head"><p class="eyebrow">Certifications &amp; badges</p><a class="verify" href="https://www.credly.com/users/govardhini-n" target="_blank" rel="noopener">Verify on Credly →</a></div>
     <div class="certs">
-      <article class="cert">
-        <svg class="badge" viewBox="0 0 120 120" aria-hidden="true">
-          <g class="spin"><circle cx="60" cy="60" r="56" fill="none" stroke="#ffb347" stroke-width="1.5" stroke-dasharray="4 7"/></g>
-          <polygon points="60,12 101,36 101,84 60,108 19,84 19,36" fill="#1a1406" stroke="#ffb347" stroke-width="2.5"/>
-          <text x="60" y="54" text-anchor="middle" font-size="17" font-weight="700" fill="#ffb347" font-family="IBM Plex Mono, monospace">AWS</text>
-          <text x="60" y="72" text-anchor="middle" font-size="9" fill="#e6ecf7" font-family="IBM Plex Mono, monospace">DATA ENG</text>
-          <text x="60" y="85" text-anchor="middle" font-size="8" fill="#8d9bb5" font-family="IBM Plex Mono, monospace">ASSOCIATE</text>
-        </svg>
-        <div>
-          <h3>AWS Certified Data Engineer – Associate</h3>
-          <p class="issuer">Amazon Web Services</p>
-          <div class="meta"><span class="chip">Ingestion</span><span class="chip">Transformation</span><span class="chip">Data stores</span><span class="chip">Governance</span></div>
-        </div>
-      </article>
-      <article class="cert">
-        <svg class="badge" viewBox="0 0 120 120" aria-hidden="true">
-          <circle cx="60" cy="60" r="50" fill="#06161b" stroke="#38d6e6" stroke-width="2.5"/>
-          <g fill="none" stroke="#38d6e6" stroke-width="1.6" opacity=".9">
-            <g class="spin"><ellipse cx="60" cy="60" rx="34" ry="12"/></g>
-            <g class="spin rev"><ellipse cx="60" cy="60" rx="34" ry="12" transform="rotate(60 60 60)"/></g>
-            <g class="spin slow"><ellipse cx="60" cy="60" rx="34" ry="12" transform="rotate(120 60 60)"/></g>
-          </g>
-          <circle cx="60" cy="60" r="6" fill="#38d6e6"/>
-        </svg>
-        <div>
-          <h3>Qiskit Advocate</h3>
-          <p class="issuer">IBM Quantum</p>
-          <div class="meta"><span class="chip">Qiskit</span><span class="chip">qBraid</span><span class="chip">Quantum circuits</span></div>
-        </div>
-      </article>
+      <article class="cert"><svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><g class="spin"><circle cx="60" cy="60" r="56" fill="none" stroke="#ffb347" stroke-width="1.5" stroke-dasharray="4 7"/></g><polygon points="60,12 101,36 101,84 60,108 19,84 19,36" fill="#1a1406" stroke="#ffb347" stroke-width="2.5"/><text x="60" y="52" text-anchor="middle" font-size="16" font-weight="700" fill="#ffb347" font-family="IBM Plex Mono, monospace">AWS</text><text x="60" y="70" text-anchor="middle" font-size="9" fill="#e6ecf7" font-family="IBM Plex Mono, monospace">DATA ENG</text><text x="60" y="84" text-anchor="middle" font-size="7.5" fill="#8d9bb5" font-family="IBM Plex Mono, monospace">ASSOCIATE</text></svg><div><h3>AWS Certified Data Engineer – Associate</h3><p class="issuer">Amazon Web Services · valid to Feb 2029</p></div></article>
+      <article class="cert"><svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><g class="spin"><circle cx="60" cy="60" r="56" fill="none" stroke="#9fb3d1" stroke-width="1.5" stroke-dasharray="4 7"/></g><polygon points="60,12 101,36 101,84 60,108 19,84 19,36" fill="#10141d" stroke="#9fb3d1" stroke-width="2.5"/><text x="60" y="52" text-anchor="middle" font-size="16" font-weight="700" fill="#9fb3d1" font-family="IBM Plex Mono, monospace">AWS</text><text x="60" y="70" text-anchor="middle" font-size="9" fill="#e6ecf7" font-family="IBM Plex Mono, monospace">CLOUD</text><text x="60" y="84" text-anchor="middle" font-size="7.5" fill="#8d9bb5" font-family="IBM Plex Mono, monospace">PRACTITIONER</text></svg><div><h3>AWS Certified Cloud Practitioner</h3><p class="issuer">Amazon Web Services · valid to Feb 2029</p></div></article>
+      <article class="cert"><svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="#06161b" stroke="#38d6e6" stroke-width="2.5"/><g fill="none" stroke="#38d6e6" stroke-width="1.6"><g class="spin"><ellipse cx="60" cy="60" rx="34" ry="12"/></g><g class="spin rev"><ellipse cx="60" cy="60" rx="34" ry="12" transform="rotate(60 60 60)"/></g><g class="spin slow"><ellipse cx="60" cy="60" rx="34" ry="12" transform="rotate(120 60 60)"/></g></g><circle cx="60" cy="60" r="6" fill="#38d6e6"/></svg><div><h3>Qiskit Advocate</h3><p class="issuer">IBM Quantum</p></div></article>
+    </div>
+    <div class="others"><span class="oc"><i>C</i>C Certification</span><span class="oc"><i>Pi</i>IoT with Raspberry Pi &amp; Python</span><span class="oc"><i>RPA</i>RPA Certification</span></div>
+    <div class="walls">
+      <div class="wall"><h3><span class="dotc" style="background:var(--heat)"></span>AWS badges <em>5</em></h3><div class="bgrid"><div class="bdg aws"><span class="ico">☁</span><div><b>Getting Started with Compute</b><small>AWS Educate · Feb 2024</small></div></div><div class="bdg aws"><span class="ico">☁</span><div><b>Getting Started with Networking</b><small>AWS Educate · Mar 2024</small></div></div><div class="bdg aws"><span class="ico">☁</span><div><b>Getting Started with Storage</b><small>AWS Educate · Feb 2024</small></div></div><div class="bdg aws"><span class="ico">☁</span><div><b>Introduction to Cloud 101</b><small>AWS Educate · Jan 2024</small></div></div><div class="bdg aws"><span class="ico">☁</span><div><b>AWS re/Start Graduate</b><small>AWS · Sep 2023</small></div></div></div></div>
+      <div class="wall"><h3><span class="dotc" style="background:var(--flow)"></span>IBM Quantum badges <em>4</em></h3><div class="bgrid"><div class="bdg ibm"><span class="ico">⚛</span><div><b>Basics of Quantum Information</b><small>IBM · Jun 2026</small></div></div><div class="bdg ibm"><span class="ico">⚛</span><div><b>Fundamentals of Quantum Algorithms</b><small>IBM · Jun 2026</small></div></div><div class="bdg ibm"><span class="ico">⚛</span><div><b>Quantum Business Foundations</b><small>IBM · Jul 2026</small></div></div><div class="bdg ibm"><span class="ico">⚛</span><div><b>Qiskit Global Summer School 2026 – Quantum Excellence</b><small>IBM · Aug 2026</small></div></div></div></div>
     </div>
   </section>
 
